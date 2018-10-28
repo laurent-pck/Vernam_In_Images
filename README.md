@@ -90,4 +90,4 @@ PHP >= 5.5.0 has to be installed on your machine with cli enabled for it. You wi
 
 ## Contributing
 
-Every contribution is welcome, please read [CONTRIBUTING.md] for all important details.
+Every contribution is welcome, please read [CONTRIBUTING.md](https://github.com/laurent-pck/Vernam_In_Images/blob/master/CONTRIBUTING.md) for all important details.
