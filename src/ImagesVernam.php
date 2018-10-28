@@ -23,6 +23,10 @@ class ImagesVernam
 
 		$encryptedImagesDirPath = __DIR__ . '/../encrypted_images';
 
+		if (!file_exists($encryptedImagesDirPath)) {
+		    mkdir($encryptedImagesDirPath, 0664, true);
+		}
+
 		$keyImagePath = $encryptedImagesDirPath . '/key.png';
 		$encryptedMessageImagePath = $encryptedImagesDirPath . '/encryptedMessage.png';
 
