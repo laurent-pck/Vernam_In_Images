@@ -87,3 +87,7 @@ The original message is echoed in the terminal.
 ### Prerequisites
 
 PHP >= 5.5.0 has to be installed on your machine with cli enabled for it. You will also need the GD lib wih it, it may already be in your PHP version.
+
+## Contributing
+
+Every contribution is welcome, please read [CONTRIBUTING.md] for all important details.

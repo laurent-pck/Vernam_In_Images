@@ -12,7 +12,7 @@ class ImagesVernam
 	 *
 	 * @param string $message (the message to encrypt)
 	 * @param string $originalImagePath (absolute path to original image)
-	 * @return bool (true on succes, throw exception otherwise)
+	 * @return bool (true on succes, Exception otherwise)
 	 */
 	public function encrypt(string $message, string $originalImagePath)
 	{
@@ -88,6 +88,32 @@ class ImagesVernam
 		imagedestroy($encryptedMessageImage);
 
 		return $stringOriginal;
+	}
+
+	/**
+	 * Generate a key.png image for each image in the given directory.
+	 * The length of the key is the number of pixels in the image.
+	 *
+	 * @param string $originalImagesDirPath (absolute path)
+	 * @return bool (true on success, Exception otherwise)
+	 */
+	public function generateKeys(string $originalImagesDirPath)
+	{
+		return true;
+	}
+
+	/**
+	 * Encrypt a message with a previously made image key.
+	 * The original image is needed to retrieve the binary key.
+	 *
+	 * @param string $message (the message to encrypt)
+	 * @param string $keyImagePath (absolute path)
+	 * @param string $originalImagePath (absolute path)
+	 * @return bool (true on success, Exception otherwise)
+	 */
+	public function encryptWithKey(string $message, string $keyImagePath, string $originalImagePath)
+	{
+		return true;
 	}
 
 	/**
