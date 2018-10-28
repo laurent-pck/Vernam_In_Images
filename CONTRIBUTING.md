@@ -11,8 +11,8 @@ Every contribution is more than welcome.
 ## Pull requests
 
 - Explain your contribution and its purpose (via comments, issue, email)
-- If necessary, update the README.md
-- Optional: add your name in contributors.md using this format:
+- If necessary, update the [README.md](https://github.com/laurent-pck/Vernam_In_Images/blob/master/README.md)
+- Optional: add your name in [contributors.md](https://github.com/laurent-pck/Vernam_In_Images/blob/master/contributors.md) using this format:
 
 ```
 - [your name](Github link)
