@@ -9,6 +9,15 @@ $encryptedMessageImagePath = $imagesToDecryptDirPath . '/' . 'encryptedMessage.p
 
 $vernam = new ImagesVernam();
 
-$message = $vernam->decrypt($keyImagePath, $encryptedMessageImagePath);
+try {
 
-echo($message);
+	$message = $vernam->decrypt($keyImagePath, $encryptedMessageImagePath);
+	echo($message);
+
+} catch (Exception $e) {
+
+	echo $e->getMessage();
+
+}
+
+

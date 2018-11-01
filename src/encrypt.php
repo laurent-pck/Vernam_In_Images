@@ -38,6 +38,13 @@ $originalImagePath = $originalImageDirPath . '/' . $originalImageName;
 
 $vernam = new ImagesVernam();
 
-$vernam->encrypt($message, $originalImagePath);
+try {
 
-echo('DONE');
+	$vernam->encrypt($message, $originalImagePath);
+	echo('DONE');
+
+} catch (Exception $e) {
+
+	echo $e->getMessage();
+
+}
