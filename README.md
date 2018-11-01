@@ -3,7 +3,7 @@
 This is an implementation of the Vernam cipher in images.
 
 Encryption:
-The given secret message is transformed in a string of bytes and a random key with the same length is generated. The message is then encrypted with this operation: message XOR key = encryptedMessage. The key and the encryptedMessage are then writen on the chosen original image to generate key.png and encryptedMessage.png.
+The given secret message is transformed in a string of bytes and a random key with the same length is generated using php random_int function. The message is then encrypted with this operation: message XOR key = encryptedMessage. The key and the encryptedMessage are then writen on the chosen original image to generate key.png and encryptedMessage.png.
 
 Decryption:
 The binary encryptedMessage and the key are extracted from their respective image (encryptedMessage.png and key.png). To retrieve the original message this operation is performed: encryptedMessage XOR key = message. The message is then converted back into ascii characters and displayed. 
@@ -86,7 +86,7 @@ The original message is echoed in the terminal.
 
 ### Prerequisites
 
-PHP >= 5.5.0 has to be installed on your machine with cli enabled for it. You will also need the GD lib wih it, it may already be in your PHP version.
+PHP >= 7.0 has to be installed on your machine with cli enabled for it. You will also need the GD lib wih it, it may already be in your PHP version.
 
 ## Contributing
 

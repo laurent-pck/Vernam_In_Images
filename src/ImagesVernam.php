@@ -186,7 +186,7 @@ class ImagesVernam
 		$key = '';
 
 		for ($i=0; $i<$length; $i++) { 
-			$key .= (string)rand(0, 1);
+			$key .= (string)random_int(0, 1);
 		}
 
 		return $key;
