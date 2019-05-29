@@ -19,15 +19,8 @@ git clone https://github.com/laurent-pck/Vernam_In_Images.git
 
 ### Encrypt
 
-Go in the Vernam_In_Images directory
-
 ```
 cd Vernam_In_Images
-```
-
-Create an original_image directory
-
-```
 mkdir original_image
 ```
 
@@ -37,7 +30,7 @@ Copy your original image, let's say a nice koala, in the original_image director
 cp /home/user/Images/koala.png original_image/koala.png
 ```
 
-Write the message you want to encrypt in message.txt. The message can contain printable ascii characters only (char code 32 to 126 inclusive). By default, message.txt contains a list of all these characters. Moreover, eight times the number of characters in the message must be smaller than the total number of pixels in the original image.
+Write the message you want to encrypt in message.txt. The message can contain printable ascii characters only (char code 32 to 126 inclusive). By default, message.txt contains a list of all these characters. Moreover, eight times the number of characters in the message must be smaller than three times the total number of pixels in the original image.
 
 ```
 echo -n "This is my secret message" > message.txt
@@ -57,15 +50,8 @@ ls encrypted_images
 
 ### Decrypt
 
-Go in the Vernam_In_Images directory
-
 ```
 cd Vernam_In_Images
-```
-
-Create an images_to_decrypt directory
-
-```
 mkdir images_to_decrypt
 ```
 

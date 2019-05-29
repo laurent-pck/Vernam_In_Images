@@ -8,43 +8,39 @@ $messagePath = __DIR__ . '/../message.txt';
 $message = file_get_contents($messagePath);
 
 if ($message === false) {
-	throw new Exception("Cannot read message in " . $messagePath . ".");
+    throw new Exception("Cannot read message in " . $messagePath . ".");
 }
 
 $originalImageDir = opendir($originalImageDirPath);
 
 if ($originalImageDir === false) {
-	throw new Exception("Cannot open directory " . $originalImageDirPath . ".");
+    throw new Exception("Cannot open directory " . $originalImageDirPath . ".");
 }
 
 $originalImageName = null;
 
 while(($file = readdir($originalImageDir)) !== false) {
-	if ($file == '.' || $file == '..') {
-		continue;
-	}
+    if ($file == '.' || $file == '..') {
+        continue;
+    }
 
-	$originalImageName = $file;
-	break;
+    $originalImageName = $file;
+    break;
 }
 
 closedir($originalImageDir);
 
 if($originalImageName === false) {
-	throw new Exception("No image in original_image directory. Please add one.");
+    throw new Exception("No image in original_image directory. Please add one.");
 }
 
 $originalImagePath = $originalImageDirPath . '/' . $originalImageName;
-
 $vernam = new ImagesVernam();
 
 try {
-
-	$vernam->encrypt($message, $originalImagePath);
-	echo('DONE');
+    $vernam->encrypt($message, $originalImagePath);
+    echo('DONE');
 
 } catch (Exception $e) {
-
-	echo $e->getMessage();
-
+    echo $e->getMessage();
 }

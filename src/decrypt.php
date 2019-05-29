@@ -11,12 +11,12 @@ $vernam = new ImagesVernam();
 
 try {
 
-	$message = $vernam->decrypt($keyImagePath, $encryptedMessageImagePath);
-	echo($message);
+    $message = $vernam->decrypt($keyImagePath, $encryptedMessageImagePath);
+    echo($message);
 
 } catch (Exception $e) {
 
-	echo $e->getMessage();
+    echo $e->getMessage();
 
 }
 
